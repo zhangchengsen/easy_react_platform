@@ -1,0 +1,16 @@
+{
+  "id": "3759401",
+  "name": "react低代码",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "24342241",
+      "name": "rotate-fill",
+      "font_class": "rotate-fill",
+      "unicode": "ea12",
+      "unicode_decimal": 59922
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+.main {
+  z-index: 999;
+  position: absolute;
+  top: 0;
+  left: 80px;
+  width: 288px;
+  height: 100%;
+  padding: 20px 14px;
+  overflow: scroll;
+  box-shadow: #ccc 1px 1px 10px;
+  background-color: white;
+}
+.main .box {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.main .box .item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45%;
+  height: 80px;
+  line-height: 80px;
+  overflow: hidden;
+  margin: 10px 0;
+  border: solid 1px #ddd;
+  text-align: center;
+  font-size: 20px;
+}
+.main .box .item:nth-of-type(odd) {
+  margin-right: 20px;
+}
+.main .box .item:hover {
+  font-weight: bold;
+  color: orange;
+  border-color: orange;
+}

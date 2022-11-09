@@ -1,0 +1,46 @@
+.main {
+    z-index: 999;
+    position: absolute;
+    top: 0;
+    left: 80px;
+    width: 288px;
+    height: 100%;
+    padding: 20px 14px;
+    overflow: scroll;
+    box-shadow: #ccc 1px 1px 10px;
+    background-color: white;
+  
+    .box {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      .item {
+        // display: inline-block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 45%;
+        height: 80px;
+        line-height: 80px;
+        overflow: hidden;
+        margin: 10px 0;
+        border: solid 1px #ddd;
+        text-align: center;
+        font-size: 20px;
+        &:nth-of-type(odd) {
+          margin-right: 20px;
+        }
+        &:hover {
+          font-weight: bold;
+          color: orange;
+          border-color: orange;
+        }
+      }
+    }
+  }
+  
+  // ul {
+  //   margin: 0;
+  //   padding: 0;
+  // }

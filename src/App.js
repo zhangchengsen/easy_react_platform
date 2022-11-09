@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from "./layout/Header";
+import Left from "./layout/Left";
+import Center from "./layout/Center";
+import Right from "./layout/Right";
+import styles from "./App.less";
+import { useCanvas } from "./store/hooks";
+import { CanvasContext } from "./Context";
+import classNames from 'classnames'
+import { useEffect, useReducer } from "react";
 
-function App() {
+export default function App(props) {
+  const canvas = useCanvas()
+  let u = true
+  const [, forceUpdate] = useReducer(x => x + 1, 0)
+  useEffect(() => {
+    const unSubscribe = canvas.subscribe(() => {
+      forceUpdate()
+    })
+    return () => unSubscribe()
+  }, [])
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={classNames(styles.main, u && 'ass')}>
+      <CanvasContext.Provider value={canvas}>
+
+        <Header />
+        <div className={styles.content}>
+          <Left />
+          <Center />
+          <Right />
+        </div>
+      </CanvasContext.Provider>
     </div>
   );
 }
-
-export default App;

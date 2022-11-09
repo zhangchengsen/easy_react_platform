@@ -1,0 +1,36 @@
+.main {
+  position: absolute;
+}
+.main img {
+  width: 100%;
+  height: 100%;
+}
+.main .editStyle {
+  box-sizing: content-box;
+  position: absolute;
+}
+.main .unselected {
+  border: solid 2px transparent;
+}
+.main .unselected .stretchDot,
+.main .unselected .rotate {
+  display: none;
+}
+.main .selected {
+  border: solid 2px #02dcf7;
+}
+.main .stretchDot {
+  z-index: 9999;
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background-color: rgba(0, 87, 255, 0.5);
+  border-radius: 50%;
+}
+.main .rotate {
+  z-index: 9999;
+  position: absolute;
+  color: rgba(0, 87, 255, 0.5);
+  font-weight: bold;
+  font-size: 24px;
+}
